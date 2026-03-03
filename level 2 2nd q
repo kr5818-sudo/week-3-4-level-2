@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class EmployeeBonus {
+
+    public static void main(String[] args) {
+
+        // Create Scanner object
+        Scanner input = new Scanner(System.in);
+
+        // Declare variables
+        double salary, bonus;
+        int yearsOfService;
+
+        // Get user input
+        System.out.print("Enter salary: ");
+        salary = input.nextDouble();
+
+        System.out.print("Enter years of service: ");
+        yearsOfService = input.nextInt();
+
+        // Check condition for bonus
+        if (yearsOfService > 5) {
+
+            // Calculate 5% bonus
+            bonus = salary * 0.05;
+            System.out.println("Bonus amount is: " + bonus);
+        } else {
+            System.out.println("No bonus applicable.");
+        }
+
+        input.close();
+    }
+}
